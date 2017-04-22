@@ -1,0 +1,5 @@
+ExitOnSame: True
+ExitIfNoConflicts: True
+AutoSelectMerge: True
+WarnAboutUnsaved: True
+Command.Edit: "emacsclient -a vim"

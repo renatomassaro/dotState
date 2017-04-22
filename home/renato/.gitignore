@@ -1,0 +1,4 @@
+# This is a global gitignore, applied to all git repositories
+.projectile
+\#*\#  # emacs backup file
+*.orig  # git backup file
