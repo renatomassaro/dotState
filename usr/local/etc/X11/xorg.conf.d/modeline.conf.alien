@@ -1,0 +1,12 @@
+Section "Screen"
+	Identifier "Screen0"
+	Device "Card0"
+	SubSection "Display"
+		Modes "1024x768"
+	EndSubSection
+EndSection
+
+Section "Monitor"
+	Identifier "DisplayPort-0"
+	Modeline "3840x2160_30.00" 338.75 3840 4080 4488 5136 2160 2163 2168 2200 -hsync +vsync
+EndSection

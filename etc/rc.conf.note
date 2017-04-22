@@ -1,0 +1,10 @@
+syslogd_flags="-ss"
+sendmail_enable="NONE"
+hostname="transltr"
+create_args_wlan0="country BR"
+sshd_enable="YES"
+powerd_enable="YES"
+# Set dumpdev to "AUTO" to enable crash dumps, "NO" to disable
+dumpdev="NO"
+wlans_ath0="wlan0"
+ifconfig_wlan0="WPA DHCP"

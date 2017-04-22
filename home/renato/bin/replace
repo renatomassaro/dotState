@@ -1,0 +1,15 @@
+#!/usr/local/bin/bash
+
+set -e
+
+OLD="$1"
+NEW="$2"
+
+if [ "$#" -lt 2 ]; then
+    echo "bad args"
+    exit 1
+fi
+
+
+set -x
+find "$PWD"/ -type f -exec sed -i '' -e s/"$OLD"/"$NEW"/g {} \;

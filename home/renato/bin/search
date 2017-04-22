@@ -1,0 +1,27 @@
+#!/usr/local/bin/bash
+
+set -eu
+
+FLAGS="-rnw"
+SEARCH=""
+
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        -i)
+            FLAGS="$FLAGS -i"
+            ;;
+        *)
+            SEARCH="$1"
+            ;;
+    esac
+    shift
+done
+
+if [ -z "$SEARCH" ]; then
+    echo "Search?"
+    exit 1
+fi
+
+set -x
+grep $FLAGS . -e "$SEARCH"

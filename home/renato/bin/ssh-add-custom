@@ -1,0 +1,26 @@
+#!/usr/local/bin/bash
+
+set -e
+
+KEY="$1"
+TIME="$2"
+
+case "$1" in
+    "google"*|gce|gcp)
+        KEY='google_compute_engine'
+        ;;
+    git)
+        KEY='github'
+        ;;
+    ansible)
+        KEY='phoebe'
+        ;;
+esac
+
+if [ -z "$KEY" ]; then
+    echo 'Tell me da key!11'
+    exit 1
+fi
+
+set -x
+ssh-add -t ${2:-2h} ~/.ssh/$KEY
