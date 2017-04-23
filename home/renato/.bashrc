@@ -19,7 +19,15 @@ if [ -x /usr/local/bin/gdircolors ]; then
 fi
 
 # Aliases
+alias g='git'
+alias s='sudo'
+alias pf='pkg search'
+alias pi='pkg install'
 alias ls='ls -G'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
 
 # Sane clipboard-related functions
 alias setclip='xclip -selection c'

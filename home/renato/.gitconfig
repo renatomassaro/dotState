@@ -46,12 +46,21 @@
 	pr = "!f() { git pull upstream pull/$1/head; }; f"
 	a = add
 	aa = add -A
-	amend = commit --amend -C HEAD
+	c = commit
+	ca = commit --amend -C HEAD
 	co = checkout
-	cb = checkout -b
-	df = diff
+	d = diff
 	dh = diff HEAD
-	dic = diff --cached
+	dc = diff --cached
+	f = fetch --all
+	p = push
+	pl = pull
+	r = "!f() { git reset HEAD~$1; }; f"
+	ru = reset 'HEAD@{1}' 
+	rh = "!f() { git reset --hard HEAD~$1; }; f"
+	ref = reflog
+	rref = "!f() { git reset 'HEAD@{'$1'}'; }; f"
+	s = status
 	log1 = log --oneline
 	tree = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	tree2 = log --graph --abbrev-commit --decorate --date=relative --all
